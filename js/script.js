@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       speed: 1500,
       effect: "fade",
       fadeEffect: { crossFade: true },
-      autoplay: { delay: 4000, disableOnInteraction: false },
+      autoplay: { delay: 2000, disableOnInteraction: false },
       allowTouchMove: false
     });
   }
@@ -42,5 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 });

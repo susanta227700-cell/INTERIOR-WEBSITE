@@ -712,28 +712,27 @@ NAVBAR SECTION
   }
 
   /* right content */
-  .title-2 {
+  /* .title-2 {
     font-size: 30px;
-  }
+  } */
   .about-section .title-2 {
-    margin: 5px auto 5px;
+    width: 100%;
+    font-size: 24px;
+    
   }
   .about-right-content {
     width: 100%;
     text-align: center;
     margin: 0 auto 30px;
   }
-  .title-2,
   .about-pera {
     text-align: center;
     margin: auto;
   }
-  .about-pera-top svg {
-    display: none;
-  }
+
   .about-pera-top {
     text-align: center;
-    margin: 0 auto;
+    margin:5px auto !important;
   }
   .about-pera {
     margin: 5px auto 5px !important;
@@ -769,6 +768,9 @@ NAVBAR SECTION
     font-weight: 200;
     color: var(--tertiary-color);
     margin: 0;
+  }
+     .about-pera-top svg {
+    display: none;
   }
   /* right content */
   .subtitle {
@@ -819,6 +821,9 @@ NAVBAR SECTION
     color: var(--tertiary-color);
     margin: 0;
   }
+    /* .about-pera-top svg {
+    display: none;
+  } */
 
   /* right content */
   .subtitle {
@@ -1232,9 +1237,9 @@ NAVBAR SECTION
 
 /*====== 576 screen ======= */
 @media (max-width: 576px) {
-  .title-2 {
+  /* .title-2 {
     margin: 15px 0 15px !important;
-  }
+  } */
   .why-choose-pera {
     font-size: 14px;
   }
@@ -1265,7 +1270,7 @@ OUR PROJECT SECTION
 }
 
 .projects-section .title-2 {
-  max-width: 555px;
+  /* max-width: 555px; */
 }
 .project-hdr-left-buttons{
   display: flex;
@@ -1306,13 +1311,12 @@ OUR PROJECT SECTION
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-
-  background: linear-gradient(to top);
+  background: linear-gradient(to top,rgba(6, 2, 2, .60), transparent);
 }
 
 .project-card img {
   width: 100%;
-  height: 420px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -1323,13 +1327,6 @@ OUR PROJECT SECTION
   right: 0;
   padding: 20px;
   color: var(--tertiary-color);
-   /* background: linear-gradient(
-    to top,
-    rgba(6, 2, 2, 0.85) 0%,
-    rgba(6, 2, 2, 0.55) 45%,
-    rgba(6, 2, 2, 0.15) 75%,
-    rgba(6, 2, 2, 0) 100%
-  ); */
   background: linear-gradient(to top, rgba(6, 2, 2, .60), transparent);
 }
 
@@ -1348,28 +1345,6 @@ OUR PROJECT SECTION
   text-transform: capitalize;
 }
 
-/* Bottom arrows */
-/* .project-arrows {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  position: static;
-  width: 44px;
-  height: 44px;
-  background: #111;
-  color: #fff;
-  border-radius: 6px;
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 18px;
-}
- */
  .project-arrow {
   display: flex;
   justify-content: center;
@@ -1405,9 +1380,72 @@ OUR PROJECT SECTION
 OUR PROJECT SECTION MEDIA QUARI
 ================================
  */
- @media screen and (max-width:992) {
-  .project-hdr-left-content .title-2{
-    margin: 0 auto;
-  }
-  
+
+ @media (max-width: 992px) {
+ .project-left-btn,.project-right-btn{
+  font-size: 18px;
  }
+
+ }
+
+  @media (max-width: 768px) {
+ 
+ .project-left-btn,.project-right-btn{
+  font-size: 18px;
+ }
+
+ }
+  @media (max-width: 992px) {
+ .project-left-btn,.project-right-btn{
+  font-size: 16px;
+ } 
+ .project-hdr-right-content{
+  margin-top: 25px;
+ }
+ 
+ /* .project-hdr-right-content{
+    margin:15px 0 15px ;
+  } */
+
+ }
+
+
+ /* 
+====================
+BLOG SECTION
+====================
+ */
+ .blog-section{
+  padding: 100px 0;
+  background: url("../assets/blog-bg-img.png") no-repeat center/cover;
+  min-height: 100vh;
+ }
+ .blog-section.title-2{
+  max-width: 381px;
+ }
+
+ .blog-img{
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+ }
+ .blog-img img{
+  width:100% ;
+  height: 100%;
+  object-fit: cover;
+ }
+ .blog-img::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(14, 11, 11, 0.65);
+ }
+
+ .video-play-btn{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+ }
+
