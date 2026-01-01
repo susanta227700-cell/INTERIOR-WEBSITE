@@ -1595,3 +1595,234 @@ position: relative;
     font-size: 14px;
   }
 }
+
+/*
+=========================
+ TESTIMONIAL SECTION
+=========================
+*/
+/* .testimonial-section{
+  padding: 100px 0;
+}
+.testimonial-card-wrapper{
+  margin-top: 50px;
+}
+.testimonial-card{
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(rgba(225, 191, 151, 10%));
+  border-radius: 5px;
+  padding: 20px 30px 39px;
+}
+.testimonial-card-heading{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Inter-font);
+  line-height: calc(23/18);
+  color: var(--secondary-color);
+  max-width: 510px;
+}
+.testimonial-card-pera{
+  font-size: 14px;
+  font-weight: normal;
+  font-family: var(--Roboto-font);
+  line-height: calc(23/14);
+  color: #6A6868;
+  max-width: 462px;
+  margin: 20px 0 30px;
+}
+.tesimonial-card-user{
+  display: flex;
+  align-items: center;
+}
+.user-img img{
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.user-info{
+  margin-left: 15px;
+}
+.user-info h5{
+  font-size: 18px;
+  font-weight:600 ;
+  color: var(--secondary-color);
+  font-family:var(--Inter-font) ;
+}
+.user-info p{
+  font-size: 14px;
+  font-weight: normal;
+  color: #757575;
+  font-family: var(--Inter-font);
+} */
+
+/*
+=========================
+ TESTIMONIAL SECTION
+=========================
+*/
+
+.testimonial-section{
+  padding: 100px 0;
+}
+
+.testimonial-card-wrapper{
+  margin-top: 50px;
+}
+
+/* CARD */
+.testimonial-card{
+  height: 100%;
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(rgba(225, 191, 151, 0.10));
+  border-radius: 5px;
+  padding: 65px 0px 39px 67px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+.testimonial-quote{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  width: 40.49px;
+  height: 40.49px;
+}
+.testimonial-star{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+}
+.testimonial-star svg{
+  width: 20px;
+  height: 20px;
+ margin-left: 5px;
+}
+
+.testimonial-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 22px 55px rgb(150, 116, 75 ,0.5);
+}
+.testimonial-card-heading{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Inter-font);
+  line-height: calc(23/18);
+  color: var(--secondary-color);
+}
+
+.testimonial-card-pera{
+  font-size: 14px;
+  font-family: var(--Roboto-font);
+  line-height: calc(23/14);
+  color: #6A6868;
+  margin: 5px 0 30px;
+  max-width: 462px;
+}
+
+.tesimonial-card-user{
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+.user-img img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-info{
+  margin-left: 15px;
+}
+
+.user-info h5{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-family: var(--Inter-font);
+  margin-bottom: 4px;
+}
+
+.user-info p{
+  font-size: 14px;
+  color: #757575;
+  font-family: var(--Inter-font);
+  margin: 0;
+}
+
+
+/*
+==================================
+ TESTIMONIAL SECTION MEDIA QUARI
+==================================
+*/
+@media (max-width: 1200px) {
+  .testimonial-card{
+    padding: 65px 20px 30px 40px;
+  }
+  .testimonial-card-pera{
+  max-width: 450px;
+ }
+}
+
+
+@media (max-width: 992px) {
+  .testimonial-card{
+    padding: 65px 35px 40px ;
+  }
+ .testimonial-card{
+    text-align: center;
+    margin: auto;
+  }
+ .testimonial-card-heading{
+  font-size: 16px;
+  text-align: center;
+ }
+ .testimonial-card-pera{
+  text-align: center;
+  margin: auto;
+  font-size: 14px;
+ }
+ .tesimonial-card-user{
+  flex-direction: column;
+  margin: 15px auto ;
+  text-align: center;
+ }
+ .user-info{
+  margin-top: 8px;
+ }
+ .user-info p{
+  font-size: 12px;
+ }
+}
+@media (max-width: 768px) {
+  .testimonial-card{
+    padding: 65px 35px 40px ;
+  }
+ .testimonial-card-heading{
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+ }
+ .testimonial-card-pera{
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 15px;
+ }
+ .tesimonial-card-user{
+  margin: auto;
+  text-align: center;
+ }
+ .user-info h5{
+  font-size: 16px;
+ }
+
+ .card-one{
+  margin-bottom: 24px;
+ }
+}
