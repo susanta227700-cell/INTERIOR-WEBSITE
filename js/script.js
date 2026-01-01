@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 16,
       speed: 900,
       autoplay: {
-        delay: 2500,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true
       },
@@ -41,6 +41,40 @@ document.addEventListener("DOMContentLoaded", function () {
         1200: { slidesPerView: 4 }
       }
     });
+    
+
+
+
+// BLOG
+
+   var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+        loop: true,
+       autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+
+        navigation: { nextEl: ".blog-right-arrow", prevEl: ".blog-left-arrow" },
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        576: { slidesPerView: 2 },
+        992: { slidesPerView: 2 },
+        1200: { slidesPerView: 3 }
+      }
+    });
+
+
+
+
+
   }
 
 
