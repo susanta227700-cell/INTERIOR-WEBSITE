@@ -70,6 +70,33 @@ document.addEventListener("DOMContentLoaded", function () {
         1200: { slidesPerView: 3 }
       }
     });
+    
+    // CONTACT US
+    const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let valid = true;
+
+  document.querySelectorAll(".form-control").forEach(input => {
+    const error = input.nextElementSibling;
+
+    if (!input.value.trim()) {
+      input.classList.add("error");
+      if (error) error.style.display = "block";
+      valid = false;
+    } else {
+      input.classList.remove("error");
+      if (error) error.style.display = "none";
+    }
+  });
+
+  if (valid) {
+    alert("Form submitted successfully!");
+    form.reset();
+  }
+});
 
 
 

@@ -1321,15 +1321,15 @@
     <section class="testimonial-section">
       <div class="container">
         <div class="testimonial-hdr-wrapper text-start">
-          <div class="subtitle">Testimonial</div>
-          <h2 class="title-2">What our clients are saying</h2>
+          <div class="subtitle" data-aos="fade-right" data-aos-delay="100">Testimonial</div>
+          <h2 class="title-2" data-aos="fade-right" data-aos-delay="200">What our clients are saying</h2>
         </div>
 
         <div class="testimonial-card-wrapper">
           <div class="row">
             <!-- CARD 1 -->
             <div class="col-lg-6 col-md-6 col-12 card-one">
-              <div class="testimonial-card ">
+              <div class="testimonial-card">
                 <div class="testimonial-quote">
                   <svg
                     width="41"
@@ -1488,12 +1488,137 @@
                     <img src="./assets/testimonial-img-2.png" alt="" />
                   </div>
                   <div class="user-info">
-                    <h5>Amelia Kristian </h5>
+                    <h5>Amelia Kristian</h5>
                     <p>Administrative, home real state</p>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT US SECTION -->
+    <section class="contact-section">
+      <div class="row contact-row m-0">
+        <!-- LEFT IMAGE -->
+        <div class="col-6 p-0">
+          <div class="contact-left-img" data-aos="fade-right" data-aos-delay="">
+            <img src="./assets/contact-img.png" alt="">
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="col-6 p-0">
+          <div class="contact-form-wrapper">
+            <div class="form-hdr-wrap">
+              <div class="subtitle" data-aos="fade-up" data-aos-delay="100">Contact Us</div>
+              <p class="form-top-pera" data-aos="fade-up" data-aos-delay="250">
+                Find us on social media, use the form, or send us an email.
+              </p>
+            </div>
+
+            <form id="contactForm" novalidate>
+              <!-- NAME -->
+              <div class="row name-row">
+                <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first-name"
+                    placeholder="First Name"
+                  />
+                  <small class="error-text">First name is required</small>
+                </div>
+                <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last-name"
+                    placeholder="Last Name"
+                  />
+                  <small class="error-text">Last name is required</small>
+                </div>
+              </div>
+
+              <!-- EMAIL -->
+              <div>
+                <input
+                  type="email"
+                  class="form-control" data-aos="fade-up" data-aos-delay="250"
+                  id="email"
+                  placeholder="Email Address"
+                />
+                <small class="error-text">Valid email is required</small>
+              </div>
+
+              <!-- SERVICES -->
+              <div class="service-needed" data-aos="fade-up" data-aos-delay="400">
+                <label class="form-label text-white">Services Needed</label>
+                <div class="form-service-box d-flex flex-wrap">
+                  <label class="me-3">
+                    <input type="checkbox" /> Residential
+                  </label>
+                  <label class="me-3">
+                    <input type="checkbox" /> Commercial
+                  </label>
+                  <label> <input type="checkbox" /> Others Inquiry </label>
+                </div>
+              </div>
+
+              <!-- TIMELINE -->
+              <div>
+                <input
+                  type="text"
+                  class="form-control" data-aos="fade-up" data-aos-delay="550"
+                  id="timeline"
+                  placeholder="Est. Project Timeline"
+                />
+                <small class="error-text">Timeline is required</small>
+              </div>
+
+              <!-- BUDGET -->
+              <div class="budget" data-aos="fade-up" data-aos-delay="850">
+                <label class="form-label text-white" data-aos="fade-up" data-aos-delay="700">Approximate Budget</label>
+
+                <div class="budget-float d-flex justify-content-between mb-1">
+                  <span id="budgetLeft">350K</span>
+                  <span>3.5M</span>
+                </div>
+
+                <input
+                  type="range"
+                  class="form-range"
+                  id="budget"
+                  min="150000"
+                  max="5000000"
+                  step="50000"
+                  value="350000"
+                />
+
+                <div class="budget-range d-flex justify-content-between">
+                  <span>$150K</span>
+                  <span>$5M+</span>
+                </div>
+              </div>
+
+              <!-- MESSAGE -->
+              <div>
+                <textarea
+                  class="form-control" data-aos="fade-up" data-aos-delay="1000"
+                  id="message"
+                  rows="4"
+                  placeholder="Describe your project"
+                ></textarea>
+                <small class="error-text">Message is required</small>
+              </div>
+
+              <!-- SUBMIT (RIGHT SIDE) -->
+              <div class="submit-wrap" data-aos="fade-up" data-aos-delay="1150">
+                <button type="submit" class="submit-btn">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
