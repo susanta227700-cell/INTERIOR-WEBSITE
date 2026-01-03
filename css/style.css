@@ -153,7 +153,7 @@ NAVBAR SECTION
 .nav-logo {
   width: 78px;
 }
-.nav-logo > svg {
+.nav-logo > a > svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2009,5 +2009,511 @@ BLOG CARD
   }
   .form-service-box label {
     font-size: 14px !important;
+  }
+}
+
+/*
+========================
+ NEWSLETTER SECTION
+========================
+*/
+.newsletter-sec {
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.newsletter-hdr-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -42px;
+  z-index: 20;
+  width: 100%;
+  max-width: 900px;
+}
+
+.newsletter-pera {
+  max-width: 810px;
+  margin: 30px auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #757575;
+  font-family: var(--Roboto-font);
+}
+
+/* subscribe form */
+.subscribe-box {
+  max-width: 810px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 13px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+.subscribe-box input {
+  flex: 1;
+  padding: 18px 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #555;
+  background: transparent;
+}
+
+.subscribe-box button {
+  padding: 18px 70px;
+  border: none;
+  background: #0a1a1c;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/*
+========================
+ RESPONSIVE
+========================
+*/
+
+/* 992*/
+@media (max-width: 992px) {
+  .newsletter-hdr-wrapper {
+    bottom: -55px;
+  }
+
+  .subscribe-box {
+    max-width: 720px;
+  }
+
+  .subscribe-box input {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .subscribe-box button {
+    padding: 16px 48px;
+    font-size: 15px;
+  }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  .newsletter-sec {
+    margin-top: 90px;
+  }
+
+  .newsletter-pera {
+    font-size: 15px;
+  }
+
+  .newsletter-hdr-wrapper {
+    bottom: -45px;
+    padding: 0 20px;
+  }
+
+  .subscribe-box {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .subscribe-box input {
+    padding: 14px 14px;
+    font-size: 14px;
+  }
+
+  .subscribe-box button {
+    padding: 14px 26px;
+    font-size: 14px;
+  }
+}
+
+/* 576 */
+@media (max-width: 576px) {
+  .newsletter-sec {
+    margin-top: 30px;
+  }
+
+  .newsletter-pera {
+    font-size: 14px;
+  }
+
+  .newsletter-hdr-wrapper {
+    bottom: -35px;
+    padding: 0 15px;
+  }
+
+  .subscribe-box {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px;
+  }
+
+  .subscribe-box input {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .subscribe-box button {
+    padding: 12px 18px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+/*
+===================
+ FOOTER SECTION
+===================
+*/
+.footer-section {
+  padding: 100px 0 40px;
+  background: #8a6b46;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section .footer-row {
+  justify-content: center;
+}
+
+/* footer card */
+.footer-card {
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.footer-logo {
+  width: 110px;
+  height: 70px;
+  background: rgb(249, 222, 182);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.footer-logo a svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-section h4 {
+  color: var(--tertiary-color);
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  font-family: var(--Roboto-font);
+}
+
+.footer-section p {
+  color: var(--tertiary-color);
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--Roboto-font);
+}
+
+.footer-links {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 20px;
+}
+
+.footer-links li a {
+  color: var(--tertiary-color);
+  font-size: 15px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 14px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-family: var(--Roboto-font);
+}
+
+/* arrow */
+.footer-links li a::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.footer-links li a:hover {
+  color: #ff8800;
+  transform: translateX(5px);
+}
+
+/* social */
+.social-media-title {
+  margin-top: 35px;
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.social-icons svg {
+  width: 32px;
+  height: 22px;
+  margin-right: 10px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.social-icons svg:hover {
+  transform: translateY(-4px);
+}
+
+/* FOOTER BOTTOM LINE */
+.footer-bottom {
+  position: relative;
+  padding-top: 50px;
+}
+
+.footer-bottom::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background: var(--tertiary-color);
+}
+
+/* BANKING CARDS */
+
+.banking-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -80px;
+  margin-bottom: 16px;
+}
+
+.banking-cards img {
+  margin-right: 8px;
+  margin-bottom: 8px;
+  height: 26px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.banking-cards img:hover {
+  transform: translateY(-4px);
+}
+
+.banking-cards img:last-child {
+  margin-right: 0;
+}
+
+/* FOOTER BOTTOM TEXT */
+.footer-bottom-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* LEFT YEAR */
+.interior-year {
+  display: flex;
+  align-items: center;
+}
+
+.interior-year svg {
+  flex-shrink: 0;
+}
+
+.interior-year p {
+  margin: 0;
+  margin-left: 12px;
+  font-size: 16px;
+  color: var(--tertiary-color);
+  line-height: calc(23 / 16);
+  font-family: var(--Roboto-font);
+}
+
+/* RIGHT  LINKS */
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-bottom-right a {
+  color: var(--tertiary-color);
+  font-size: 16px;
+  font-family: var(--Roboto-font);
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.footer-bottom-right a:last-child {
+  margin-right: 0;
+}
+.footer-bottom-right a:hover {
+  color: #e98309;
+}
+
+/*
+==============================
+ FOOTER MEDIA QUARI RESPONSIVE
+==============================
+*/
+
+/* 992 */
+@media (max-width: 992px) {
+  .footer-section .footer-row {
+    justify-content: center;
+  }
+
+  .footer-section .col-md-6 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-card {
+    max-width: 360px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  /* footer bottom */
+  .footer-bottom-text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .interior-year {
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom-right a {
+    margin-right: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  .footer-card {
+    max-width: 400px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .footer-section h4 {
+    font-size: 20px;
+  }
+  .footer-section p {
+    font-size: 15px;
+  }
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-links li a {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .footer-links li a::before {
+    position: static;
+    display: inline-block;
+    margin-right: 6px;
+    content: ">";
+  }
+
+  .footer-logo {
+    margin: 0 auto 16px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .social-icons svg {
+    margin: 0 15px;
+  }
+
+  .interior-year p,
+  .footer-bottom-right a {
+    font-size: 15px;
+  }
+}
+
+/* 576 */
+@media (max-width: 576px) {
+  .footer-card {
+    max-width: 360px;
+  }
+  .footer-section h4 {
+    font-size: 18px;
+  }
+  .footer-section p {
+    font-size: 14px;
+  }
+  .footer-links li a {
+    font-size: 14px !important;
+  }
+  .social-icons svg {
+    margin-right: 10px;
+  }
+
+  .interior-year p {
+    font-size: 14px;
+  }
+  .footer-bottom-right a {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding-top: 24px;
+  }
+
+  .interior-year {
+    flex-direction: column;
+  }
+
+  .interior-year p {
+    margin-left: 0;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    flex-direction: column;
+  }
+
+  .footer-bottom-right a {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .footer-bottom-right a:last-child {
+    margin-bottom: 0;
   }
 }
