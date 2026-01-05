@@ -2516,4 +2516,75 @@ BLOG CARD
   .footer-bottom-right a:last-child {
     margin-bottom: 0;
   }
+  .last-card{
+    margin-bottom: 70px;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-title{
+  color:#c98c3a;
+  font-weight:600;
+}
+
+.form-control{
+  height:46px;
+}
+
+.login-btn{
+  background:#f9a21b;
+  color:#fff;
+  border:none;
+  height:46px;
+}
+
+.error-text{
+  font-size:13px;
+  color:red;
+}
+
+.toggle-pass{
+  position:absolute;
+  right:12px;
+  top:38px;
+  cursor:pointer;
+}
+
+.forgot-link{
+  color:#f9a21b;
+  text-decoration:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

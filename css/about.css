@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary-color: #a35c09;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+
+  /* FONT */
+  --Poppins-font: Poppins-Medium;
+  --Roboto-font: Roboto;
+  --Inter-font: Inter-Regular;
+  --SchibstedGrotesk-font: SchibstedGrostesk-latin-ext-600-normal;
+  --playfair-font: PlayfairDisplay-Bold;
+}
+body {
+  background: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+/*
+=========================
+ ABOUT HERO SECTION
+=========================
+*/
+.about-hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(16, 14, 14, 0.6),
+      rgba(16, 14, 14, 0.4),
+      rgba(217, 217, 217, 0%)
+    ),
+    url("../assets/about-hero-sec.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 445px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 110px;
+}
+.about-main-title{
+    color: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: var(--playfair-font);
+    margin-bottom:10px ;
+}
+.breadcrumb-wrap{
+    color: var(--tertiary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: var(--Inter-font);
+}
+.breadcrumb-wrap span{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.breadcrumb-wrap a{
+    color: var(--tertiary-color);
+
+}
+
+
+/*
+========================
+ COUNTER SECTION
+========================
+*/
+.counter-section {
+  text-align: center;
+  padding: 20px 270px;
+  background: #84B7C7;
+}
+
+.counter-section .counter-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.counter-section .column {
+  flex: 1 1 200px;
+}
+
+.counter-section .counter {
+  font-size: 30px;
+  font-family: var(--Inter-font);
+  font-weight: 700;
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.counter-section .counter::after {
+  content: "+";
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.counter-section p {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-family: var(--Inter-font);
+  font-weight: 600;
+}
+
+ /* COUNTER MEDIA QUARI */
+ /* 1200 */
+@media (max-width: 1200px) {
+  .counter-section {
+    padding: 40px 120px;
+  }
+}
+
+/* 992 */
+@media (max-width: 992px) {
+  .counter-section {
+    padding: 40px 60px;
+  }
+
+  .counter-section .counter {
+    font-size: 28px;
+  }
+
+  .counter-section .counter::after {
+    font-size: 28px;
+  }
+}
+
+/* 768 */
+@media (max-width: 768px) {
+  .counter-section {
+    padding: 35px 40px;
+  }
+
+  .counter-section .counter-row {
+    justify-content: center;
+  }
+
+  .counter-section .column {
+    flex: 1 1 45%;
+  }
+
+   /* ONLY TOP 2 CARDS GAP  */
+  .counter-section .column:nth-child(1),
+  .counter-section .column:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+
+/* 576 */
+@media (max-width: 576px) {
+  .counter-section {
+    padding: 30px 20px;
+  }
+
+  .counter-section .column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  .counter-section .column:last-child {
+    margin-bottom: 0;
+  }
+
+  .counter-section .counter {
+    font-size: 24px;
+  }
+
+  .counter-section .counter::after {
+    font-size: 24px;
+    margin-left: 3px;
+  }
+
+  .counter-section p {
+    font-size: 14px;
+  }
+}
+
+/* 360 */
+@media (max-width: 360px) {
+  .counter-section {
+    padding: 25px 15px;
+  }
+
+  .counter-section .counter {
+    font-size: 22px;
+  }
+
+  .counter-section .counter::after {
+    font-size: 22px;
+  }
+
+  .counter-section p {
+    font-size: 14px !important;
+  }
+}
+
+
+/*
+========================
+ WHY CHOOSE SECTION
+========================
+ */
+
+.why-choose-us-sec {
+  padding: 100px 0;
+}
+
+/* left hdr text */
+.why-choose-left-hdr {
+  max-width: 520px;
+}
+
+.why-choose-us-sec .title-2 {
+  max-width: 510px;
+  margin: 15px 0 15px;
+}
+
+.why-choose-pera {
+  max-width: 473px;
+  color: #757575;
+}
+
+/* CARDS */
+.why-choose-row {
+  margin-top: 40px;
+}
+
+.why-choose-card {
+  max-width: 240px;
+  /* background: #cbcbcb;
+  padding: 20px 15px  5px; */
+  /* border-radius: 10px;
+  transition: all 0.4s ease; */
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.06); */
+  /* padding: 15px 10px; */
+}
+
+/* .why-choose-card:hover{
+  transform: translateY(-10px);
+  box-shadow:  0 30px 65px rgb(186, 162, 135,0.4);
+  padding: 15px 10px;
+} */
+
+.why-choose-card-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f8ede1;
+}
+
+.why-choose-card h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 15px 0 8px;
+  font-family: var(--Inter-font);
+  /* max-width: 172px; */
+}
+
+.why-choose-card p {
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+  /* max-width: 205px; */
+}
+
+.why-choose-card-img {
+  transition: transform 0.4s ease;
+}
+
+.why-choose-card:hover .why-choose-card-img {
+  transform: scale(1.1);
+}
+
+/* RIGHT IMAGES */
+.why-choose-img-top img,
+.why-choose-img-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+  /* width: 100%;
+  height: auto;
+  display: block; */
+}
+.why-choose-img-top {
+  margin-bottom: 24px;
+}
+
+.why-choose-img-top,
+.left,
+.right {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.why-choose-img-top,
+.left,
+.right {
+  transition: transform 0.6s ease;
+}
+
+.why-choose-img-top:hover img,
+.left:hover img,
+.right:hover img {
+  transform: scale(1.08);
+  transition: transform 0.7s ease;
+}
+
+/*
+==================================
+ WHYCHOOSE US SECTION MEDIA QUARI
+==================================
+ */
+/* ====== 1200 screen ======= */
+@media screen and (max-width: 1200px) {
+  .why-choose-us-sec {
+    margin-top: 100px !important;
+  }
+}
+
+/* ====== 992 screen ======= */
+@media screen and (max-width: 992px) {
+  .title-2 {
+    margin: 15px auto 15px !important;
+  }
+  .why-choose-us-sec {
+    margin-top: 10px !important;
+  }
+
+  .why-choose-left-hdr {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  .why-choose-us-sec .title-2 {
+    max-width: 650px;
+    margin: auto;
+  }
+  .why-choose-pera {
+    text-align: center;
+    margin: auto;
+    max-width: 650px;
+  }
+  .why-choose-row {
+    margin: 50px auto;
+  }
+
+  .why-choose-card h5 {
+    max-width: 300px;
+  }
+
+  .why-choose-card p {
+    max-width: 300px;
+  }
+
+  .why-choose-img-top {
+    margin-top: 40px;
+  }
+
+  .why-choose-card {
+    max-width: 100%;
+  }
+}
+
+/*====== 768 screen ======= */
+@media (max-width: 768px) {
+  .why-choose-card {
+    text-align: center;
+    margin: 15px auto;
+  }
+  .why-choose-card-img {
+    margin: auto;
+  }
+  .why-choose-card h5,
+  p {
+    margin: auto;
+  }
+  .why-choose-card h5 {
+    margin: 15px 0 8px;
+  }
+
+  .why-choose-img-bottom {
+    margin-bottom: 25px;
+  }
+}
+
+/*====== 576 screen ======= */
+@media (max-width: 576px) {
+  /* .title-2 {
+    margin: 15px 0 15px !important;
+  } */
+  .why-choose-pera {
+    font-size: 14px;
+  }
+  .why-choose-card {
+    text-align: center;
+    margin: 15px auto;
+  }
+  .why-choose-card-img {
+    margin: auto;
+  }
+  .why-choose-card h5,
+  p {
+    margin: 15px auto 8px;
+  }
+  .why-choose-card h5 {
+    font-size: 15px;
+  }
+}
+
+
+
+/*
+====================
+ AWARD SECTION
+====================
+ */
+ .award-section {
+ padding-bottom: 100px ;
+ } 
+ .award-pera{
+  font-size: 16px;
+  font-family: var(--Roboto-font);
+  color: #757575;
+  margin-bottom: 20px;
+  line-height: calc(25/16);
+ }
+ .signature{
+   font-family: "Alex Brush", cursive;
+   color: #D1AE86 !important;
+   font-size: 24px;
+   font-weight: normal;
+ }
+ .ceo-name{
+  font-size: 20px;
+  font-weight: normal;
+  font-family: var(--Inter-font);
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+ }
+
+ /* right img */
+ .award-img{
+  display: flex;
+  align-items: center;
+  max-width: 611px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover ;
+  position: relative;
+
+
+ }
+ .award-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+ }
+ .popup-text{
+   position: absolute;
+  bottom: 50px;
+ left: -250px;
+  max-width: 395px;
+  background: var(--secondary-color);
+  padding: 25px 25px;
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.4s ease;
+  margin: 0;
+ }
+ .popup-text p{
+   font-size: 14px;
+    font-family: var(--Roboto-font);
+    line-height: calc(25/16);
+     color: var(--tertiary-color);
+
+ }
+
+.award-img:hover .popup-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+===========================
+ AWARD SECTION MEDIA QUARI
+===========================
+ */
+
+/* Tablet to Mobile */
+@media (max-width: 992px) {
+
+  .award-section {
+    text-align: center;
+  }
+
+  /* left content */
+  .award-left-content {
+    margin: 0 auto;
+  }
+
+  .award-section .subtitle,
+  .award-section .title-2 {
+    margin: 0 auto;
+  }
+
+  .award-pera,
+  .ceo-name,
+  .signature {
+    text-align: center;
+  }
+
+  .ceo-name {
+    margin-bottom: 15px;
+  }
+
+  /* image center */
+  .award-img {
+    margin: 30px auto 0;
+  }
+
+  /* popup */
+  .popup-text {
+    left: 50%;
+    bottom: 16px;
+
+    transform: translate(-50%, 0);
+    max-width: calc(100% - 32px);
+
+    text-align: center;
+    opacity: 1;   
+  }
+
+  .popup-text p {
+    font-size: 13px;
+    line-height: calc(25/16);
+  }
+}
+
+/* 576 */
+@media (max-width: 576px) {
+
+  .award-pera,
+  .ceo-name,
+  .signature {
+    font-size: 14px;
+  }
+
+  .popup-text {
+    padding: 8px 10px;
+  }
+
+  .popup-text p {
+    font-size: 12px;
+    line-height: calc(22/16);
+  }
+}
