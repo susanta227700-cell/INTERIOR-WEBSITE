@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ✅✅ COUNTER SECTION (NOW INDEPENDENT)
+  // COUNTER SECTION
   const counters = document.querySelectorAll(".counter");
   const section = document.querySelector(".counter-section");
   let hasAnimated = false;
