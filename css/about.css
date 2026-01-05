@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --primary-color: #a35c09;
   --secondary-color: #000000;
@@ -22,8 +22,6 @@ a {
   display: inline-block;
 }
 
-
-
 /*
 =========================
  ABOUT HERO SECTION
@@ -46,34 +44,32 @@ a {
   justify-content: center;
   padding-top: 110px;
 }
-.about-main-title{
-    color: var(--tertiary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    font-weight: bold;
-    font-family: var(--playfair-font);
-    margin-bottom:10px ;
+.about-main-title {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: var(--playfair-font);
+  margin-bottom: 10px;
 }
-.breadcrumb-wrap{
-    color: var(--tertiary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    font-weight: normal;
-    font-family: var(--Inter-font);
+.breadcrumb-wrap {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--Inter-font);
 }
-.breadcrumb-wrap span{
-    margin-left: 5px;
-    margin-right: 5px;
+.breadcrumb-wrap span {
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.breadcrumb-wrap a{
-    color: var(--tertiary-color);
-
+.breadcrumb-wrap a {
+  color: var(--tertiary-color);
 }
-
 
 /*
 ========================
@@ -83,7 +79,7 @@ a {
 .counter-section {
   text-align: center;
   padding: 20px 270px;
-  background: #84B7C7;
+  background: #84b7c7;
 }
 
 .counter-section .counter-row {
@@ -117,8 +113,8 @@ a {
   font-weight: 600;
 }
 
- /* COUNTER MEDIA QUARI */
- /* 1200 */
+/* COUNTER MEDIA QUARI */
+/* 1200 */
 @media (max-width: 1200px) {
   .counter-section {
     padding: 40px 120px;
@@ -154,7 +150,7 @@ a {
     flex: 1 1 45%;
   }
 
-   /* ONLY TOP 2 CARDS GAP  */
+  /* ONLY TOP 2 CARDS GAP  */
   .counter-section .column:nth-child(1),
   .counter-section .column:nth-child(2) {
     margin-bottom: 30px;
@@ -208,7 +204,6 @@ a {
     font-size: 14px !important;
   }
 }
-
 
 /*
 ========================
@@ -422,59 +417,55 @@ a {
   }
 }
 
-
-
 /*
 ====================
  AWARD SECTION
 ====================
  */
- .award-section {
- padding-bottom: 100px ;
- } 
- .award-pera{
+.award-section {
+  padding-bottom: 100px;
+}
+.award-pera {
   font-size: 16px;
   font-family: var(--Roboto-font);
   color: #757575;
   margin-bottom: 20px;
-  line-height: calc(25/16);
- }
- .signature{
-   font-family: "Alex Brush", cursive;
-   color: #D1AE86 !important;
-   font-size: 24px;
-   font-weight: normal;
- }
- .ceo-name{
+  line-height: calc(25 / 16);
+}
+.signature {
+  font-family: "Alex Brush", cursive;
+  color: #d1ae86 !important;
+  font-size: 24px;
+  font-weight: normal;
+}
+.ceo-name {
   font-size: 20px;
   font-weight: normal;
   font-family: var(--Inter-font);
   color: var(--secondary-color);
   margin-bottom: 25px;
- }
+}
 
- /* right img */
- .award-img{
+/* right img */
+.award-img {
   display: flex;
   align-items: center;
   max-width: 611px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover ;
+  background-size: cover;
   position: relative;
-
-
- }
- .award-img img{
+}
+.award-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 5px;
- }
- .popup-text{
-   position: absolute;
+}
+.popup-text {
+  position: absolute;
   bottom: 50px;
- left: -250px;
+  left: -250px;
   max-width: 395px;
   background: var(--secondary-color);
   padding: 25px 25px;
@@ -483,33 +474,36 @@ a {
   transform: translateY(12px);
   transition: all 0.4s ease;
   margin: 0;
- }
- .popup-text p{
-   font-size: 14px;
-    font-family: var(--Roboto-font);
-    line-height: calc(25/16);
-     color: var(--tertiary-color);
-
- }
+}
+.popup-text p {
+  font-size: 14px;
+  font-family: var(--Roboto-font);
+  line-height: calc(25 / 16);
+  color: var(--tertiary-color);
+}
 
 .award-img:hover .popup-text {
   opacity: 1;
   transform: translateY(0);
 }
+  .award-section .subtitle {
+    text-align: left;
+  }
 
 /*
 ===========================
  AWARD SECTION MEDIA QUARI
 ===========================
  */
-
 /* Tablet to Mobile */
 @media (max-width: 992px) {
-
   .award-section {
     text-align: center;
   }
-
+ .award-section .subtitle {
+    text-align: center;
+    margin: 0 auto;
+  }
   /* left content */
   .award-left-content {
     margin: 0 auto;
@@ -544,18 +538,22 @@ a {
     max-width: calc(100% - 32px);
 
     text-align: center;
-    opacity: 1;   
+    opacity: 1;
   }
 
   .popup-text p {
     font-size: 13px;
-    line-height: calc(25/16);
+    line-height: calc(25 / 16);
+  }
+   .popup-text {
+    padding: 8px 10px;
+    justify-content: center;
+    text-align: center;
   }
 }
 
 /* 576 */
 @media (max-width: 576px) {
-
   .award-pera,
   .ceo-name,
   .signature {
@@ -564,10 +562,12 @@ a {
 
   .popup-text {
     padding: 8px 10px;
+    justify-content: center;
+    text-align: center;
   }
 
   .popup-text p {
     font-size: 12px;
-    line-height: calc(22/16);
+    line-height: calc(22 / 16);
   }
 }
