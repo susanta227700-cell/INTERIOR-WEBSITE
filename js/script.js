@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // NAVBAR
+  /* =====================
+     NAVBAR
+  ===================== */
   const navbarToggler = document.querySelector(".navbar-toggler");
   if (navbarToggler) {
     navbarToggler.addEventListener("click", function () {
@@ -8,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // HERO SWIPER
+  /* =====================
+     HERO SWIPER
+  ===================== */
   if (document.querySelector(".heroBgSwiper") && typeof Swiper !== "undefined") {
     new Swiper(".heroBgSwiper", {
       loop: true,
@@ -23,31 +27,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // PROJECT SWIPER
-  if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
-    new Swiper(".projectSwiper", {
-      loop: true,
-      spaceBetween: 16,
-      speed: 900,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      navigation: {
-        nextEl: ".right-arrow",
-        prevEl: ".left-arrow"
-      },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        576: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 }
-      }
-    });
-  }
+  /* =====================
+     PROJECT SWIPER  ✅ (FIXED)
+  ===================== */
+/* =====================
+   PROJECT SWIPER
+===================== */
+if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
 
-  // BLOG SWIPER
+  // 🔥 body না, section দিয়ে detect
+  const isProjectPage = document.querySelector(
+    ".projects-section[data-project-page]"
+  );
+
+  new Swiper(".projectSwiper", {
+    loop: !isProjectPage,      // project page → loop OFF
+    speed: 900,
+    spaceBetween: 16,
+
+    autoplay: !isProjectPage
+      ? { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }
+      : false,
+
+    navigation: {
+      nextEl: ".right-arrow",
+      prevEl: ".left-arrow"
+    },
+
+    slidesPerView: 4,
+    slidesPerGroup: isProjectPage ? 4 : 1,
+
+    grid: {
+      rows: isProjectPage ? 2 : 1,
+      fill: "row"
+    },
+
+    breakpoints: {
+      0:   { slidesPerView: 1, grid: { rows: 1 } },
+      576: { slidesPerView: 2, grid: { rows: isProjectPage ? 2 : 1 } },
+      992: { slidesPerView: 4, grid: { rows: isProjectPage ? 2 : 1 } }
+    }
+  });
+}
+
+
+  /* =====================
+     BLOG SWIPER
+  ===================== */
   if (document.querySelector(".mySwiper") && typeof Swiper !== "undefined") {
     new Swiper(".mySwiper", {
       slidesPerView: 3,
@@ -75,7 +101,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // CONTACT FORM VALIDATION
+  /* =====================
+     CONTACT FORM
+  ===================== */
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -103,13 +131,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // COUNTER SECTION
+  /* =====================
+     COUNTER SECTION
+  ===================== */
   const counters = document.querySelectorAll(".counter");
   const section = document.querySelector(".counter-section");
   let hasAnimated = false;
 
   if (counters.length && section) {
-
     const startCounting = () => {
       counters.forEach(counter => {
         const target = +counter.getAttribute("data-target");

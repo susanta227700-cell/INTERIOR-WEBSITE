@@ -1265,16 +1265,19 @@ OUR PROJECT SECTION
   padding: 100px 0;
 }
 
-.projects-section .title-2 {
-  /* max-width: 555px; */
-}
 .project-hdr-left-buttons {
   display: flex;
 }
 
 .project-left-btn {
   position: relative;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Inter-font);
+  margin-right: 24px;
 }
+
 .project-left-btn::after {
   content: "";
   position: absolute;
@@ -1284,13 +1287,7 @@ OUR PROJECT SECTION
   left: 0;
   bottom: -8px;
 }
-.project-left-btn {
-  color: var(--secondary-color);
-  font-size: 20px;
-  font-weight: 600;
-  font-family: var(--Inter-font);
-  margin-right: 24px;
-}
+
 .project-right-btn {
   color: #a4a29f;
   font-size: 20px;
@@ -1302,44 +1299,119 @@ OUR PROJECT SECTION
   color: #757575;
 }
 
+/*
+=========================
+   PROJECT CARD
+=========================
+ */
 .project-card {
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-  background: linear-gradient(to top, rgba(6, 2, 2, 0.6), transparent);
+  height: 400px;         
 }
 
 .project-card img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 
-.project-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
-  color: var(--tertiary-color);
-  background: linear-gradient(to top, rgba(6, 2, 2, 0.6), transparent);
+.projectSwiper .swiper-wrapper {
+  height: auto !important;
 }
 
+.projectSwiper .swiper-slide {
+  height: auto !important;
+}
+
+/* OVERLAY */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(6, 2, 2, 0.65), transparent);
+  color: var(--tertiary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* hide */
+.project-overlay h5,
+.project-overlay p,
+.project-overlay span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* hover */
+.project-card:hover .project-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* animation */
+.project-card:hover .project-overlay h5 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.project-card:hover .project-overlay p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.project-card:hover .project-overlay p:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.project-card:hover .project-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}
+
+/* TEXT */
 .project-overlay h5 {
   font-size: 25px;
   font-weight: 600;
+  margin-bottom: 15px;
 }
+
 .project-overlay p {
   font-size: 14px;
   font-weight: 500;
-  margin: 16px auto 1px;
-}
-.project-overlay span {
-  color: #f88700;
-  font-size: 14px;
-  text-transform: capitalize;
+  line-height: 1.4;
+  margin: 8px 0;
 }
 
+.project-overlay p + p {
+  margin-top: 6px;
+}
+
+.project-overlay span {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #f88700;
+  display: inline-block;
+}
+
+/* ARROWS */
 .project-arrow {
   display: flex;
   justify-content: center;
@@ -1348,20 +1420,23 @@ OUR PROJECT SECTION
   z-index: 20;
 }
 
-.left-arrow {
-  margin-right: 10px;
-}
 .left-arrow,
 .right-arrow {
   background: var(--secondary-color);
   height: 50px;
   width: 50px;
   border-radius: 5px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.left-arrow {
+  margin-right: 10px;
 }
 
 .left-arrow:hover,
@@ -1370,12 +1445,13 @@ OUR PROJECT SECTION
   transform: translateY(-3px);
 }
 
-/* 
-================================
-OUR PROJECT SECTION MEDIA QUARI
-================================
- */
+/*
+=========================
+  PROJECT MEDIA QUERIES
+========================= 
+*/
 
+/* 992px */
 @media (max-width: 992px) {
   .project-left-btn,
   .project-right-btn {
@@ -1383,25 +1459,30 @@ OUR PROJECT SECTION MEDIA QUARI
   }
 }
 
+/* 768px */
 @media (max-width: 768px) {
   .project-left-btn,
   .project-right-btn {
     font-size: 18px;
   }
+
+  .project-hdr-left-buttons {
+    margin-bottom: 30px;
+  }
 }
+
+/* 576px */
 @media (max-width: 576px) {
   .project-left-btn,
   .project-right-btn {
     font-size: 16px;
   }
+
   .project-hdr-right-content {
     margin-top: 25px;
   }
-
-  /* .project-hdr-right-content{
-    margin:15px 0 15px ;
-  } */
 }
+
 
 /* 
 ====================

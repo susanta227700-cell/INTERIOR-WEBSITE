@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primary-color: #a35c09;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+
+  /* FONT */
+  --Poppins-font: Poppins-Medium;
+  --Roboto-font: Roboto;
+  --Inter-font: Inter-Regular;
+  --SchibstedGrotesk-font: SchibstedGrostesk-latin-ext-600-normal;
+  --playfair-font: PlayfairDisplay-Bold;
+}
+body {
+  background: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*
+=========================
+ PROJECT HERO SECTION
+=========================
+*/
+.project-hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(16, 14, 14, 0.6),
+      rgba(16, 14, 14, 0.4),
+      rgba(217, 217, 217, 0%)
+    ),
+    url("../assets/project-hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 445px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 110px;
+}
+.project-main-title {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: var(--playfair-font);
+  margin-bottom: 10px;
+}
+.breadcrumb-wrap {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--Inter-font);
+}
+.breadcrumb-wrap span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.breadcrumb-wrap a {
+  color: var(--tertiary-color);
+}
+
+
+/* 
+====================
+OUR PROJECT SECTION
+====================
+*/
+.projects-section {
+  padding: 100px 0 120px;   
+  position: relative;
+}
+
+.project-hdr-left-buttons {
+  display: flex;
+}
+
+.project-left-btn {
+  position: relative;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Inter-font);
+  margin-right: 24px;
+}
+
+.project-left-btn::after {
+  content: "";
+  position: absolute;
+  width: 101px;
+  height: 3px;
+  background: var(--primary-color);
+  left: 0;
+  bottom: -8px;
+}
+
+.project-right-btn {
+  color: #a4a29f;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--Inter-font);
+}
+
+.project-hdr-right-content p {
+  color: #757575;
+}
+
+/*
+=========================
+   PROJECT CARD
+=========================
+ */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  height: 400px;         
+}
+
+.project-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* OVERLAY */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(6, 2, 2, 0.65), transparent);
+  color: var(--tertiary-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-overlay h5,
+.project-overlay p,
+.project-overlay span {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* animation */
+.project-card:hover .project-overlay h5 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.project-card:hover .project-overlay p:nth-of-type(1) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.25s;
+}
+
+.project-card:hover .project-overlay p:nth-of-type(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+.project-card:hover .project-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.55s;
+}
+
+/* text */
+.project-overlay h5 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.project-overlay p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+.project-overlay p + p {
+  margin-top: 6px;
+}
+
+.project-overlay span {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #f88700;
+  display: inline-block;
+}
+
+/* ARROWS */
+.project-arrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 5;
+}
+
+.left-arrow,
+.right-arrow {
+  background: var(--secondary-color);
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.left-arrow {
+  margin-right: 10px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+
+   /* PROJECT PAGE  */
+
+.projects-section[data-project-page] .swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  height: auto !important;
+}
+
+.projects-section[data-project-page] .swiper-slide {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.projects-section[data-project-page] .project-arrow {
+  display: none;
+}
+
+/*
+=========================
+  PROJECT MEDIA QUERIES
+========================= 
+*/
+
+/* 992px */
+@media (max-width: 992px) {
+  .project-left-btn,
+  .project-right-btn {
+    font-size: 18px;
+  }
+
+  .projects-section[data-project-page] .swiper-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .project-left-btn,
+  .project-right-btn {
+    font-size: 18px;
+  }
+
+  .project-hdr-left-buttons {
+    margin-bottom: 30px;
+  }
+}
+
+/* 576px */
+@media (max-width: 576px) {
+  .project-left-btn,
+  .project-right-btn {
+    font-size: 16px;
+  }
+
+  .project-hdr-right-content {
+    margin-top: 25px;
+  }
+
+  .projects-section[data-project-page] .swiper-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
