@@ -424,6 +424,7 @@ a {
  */
 .award-section {
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 .award-pera {
   font-size: 16px;

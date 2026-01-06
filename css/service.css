@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primary-color: #a35c09;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+
+  /* FONT */
+  --Poppins-font: Poppins-Medium;
+  --Roboto-font: Roboto;
+  --Inter-font: Inter-Regular;
+  --SchibstedGrotesk-font: SchibstedGrostesk-latin-ext-600-normal;
+  --playfair-font: PlayfairDisplay-Bold;
+}
+body {
+  background: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*
+=========================
+ ABOUT HERO SECTION
+=========================
+*/
+.service-hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(16, 14, 14, 0.6),
+      rgba(16, 14, 14, 0.4),
+      rgba(217, 217, 217, 0%)
+    ),
+    url("../assets/service-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 445px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 110px;
+}
+.service-main-title {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: var(--playfair-font);
+  margin-bottom: 10px;
+}
+.breadcrumb-wrap {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--Inter-font);
+}
+.breadcrumb-wrap span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.breadcrumb-wrap a {
+  color: var(--tertiary-color);
+}
+
+/*
+========================
+ SERVICE SECTION
+========================
+ */
+.service-section {
+  padding: 100px 0;
+}
+
+.service-section .title-2 {
+  max-width: 715px;
+  margin: 15px auto;
+}
+
+.service-pera {
+  max-width: 1014px;
+  color: #757575;
+  margin: 15px auto;
+}
+
+/* service card */
+.service-row {
+  margin-top: 50px;
+}
+
+.service-card {
+  position: relative;
+  height: 345px;
+  background: var(--tertiary-color);
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 15%);
+  overflow: hidden;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  will-change: transform;
+  margin-bottom: 24px;
+}
+
+.service-icon {
+  width: 90px;
+  height: 90px;
+  background: rgba(163, 92, 9, 0.12);
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+  transition: all 0.45s ease;
+}
+
+.service-icon svg {
+  width: 55px;
+  height: 48px;
+}
+
+.service-content {
+  position: absolute;
+  inset: 0;
+  padding: 120px 25px 40px;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.service-content h4,
+.service-content p {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.service-card:hover {
+  /* transform: translateY(-12px); */
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.14);
+  padding: 36px 16px 35px !important;
+  height: 345px;
+  transition: all 5s linear;
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 30px 65px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover .service-icon {
+  top: 32px;
+  transform: translateX(-50%) scale(1.1);
+  background: rgba(163, 92, 9, 0.18);
+}
+
+.service-card:hover .service-content {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.service-card:hover .service-content h4 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.45s ease 0.15s;
+  margin: 20px auto;
+}
+
+.service-card:hover .service-content p {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.45s ease 0.35s;
+}
+
+.service-content h4 {
+  max-width: 200px;
+  margin: 25px auto 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-family: var(--Inter-font);
+}
+
+.service-content p {
+  max-width: 235px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #5a5959;
+  line-height: calc(25 / 16);
+  font-family: var(--Roboto-font);
+}
+
+.service-section .secondary-btn {
+  width: fit-content;
+  /* justify-content: center; */
+  display: flex;
+  margin: 65px auto;
+}
+
+/*
+==================================
+ SERVICE SECTION MEDIA QUARI
+==================================
+ */
+
+@media screen and (max-width: 992px) {
+  .service-content p {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-content p {
+    max-width: 600px;
+  }
+  .service-content h4 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .service-content p {
+    width: 100%;
+  }
+  .service-pera {
+    font-size: 14px;
+  }
+  .service-content h4 {
+    font-size: 16px;
+  }
+  .service-content p {
+    font-size: 14px;
+  }
+}
+
+/*
+=====================
+SERVICE BOTTOM PART 
+=====================
+*/
+.service-bottom-section {
+  padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+.service-bottom-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.service-col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* CARD */
+.service-bottom-card {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  border-radius: 3px;
+}
+
+.service-bottom-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.service-bottom-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+/* BOTTOM TEXT */
+.service-card-bottom-text {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+  color: #fff;
+  max-width: 320px;
+}
+
+.service-card-bottom-text h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.service-card-bottom-text p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*
+    ===============================
+   SERVICE BOTTOM PART MEDIA QUARI
+    ===============================
+    */
+/* 992 */
+@media (max-width: 992px) {
+  .service-bottom-card {
+    width: calc(100% - 24px);
+    margin-bottom: 30px;
+  }
+}
+
+/* 576 */
+@media (max-width: 576px) {
+  .service-bottom-section {
+    padding: 50px 0;
+  }
+
+  .service-card-bottom-text {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .service-card-bottom-text h4 {
+    font-size: 18px;
+  }
+
+  .service-card-bottom-text p {
+    font-size: 14px;
+  }
+}
