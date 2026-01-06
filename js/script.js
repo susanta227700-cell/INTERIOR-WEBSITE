@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =====================
-     NAVBAR
-  ===================== */
+  // NAVBAR
   const navbarToggler = document.querySelector(".navbar-toggler");
   if (navbarToggler) {
     navbarToggler.addEventListener("click", function () {
@@ -10,9 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =====================
-     HERO SWIPER
-  ===================== */
+//  HERO SWIPER
   if (document.querySelector(".heroBgSwiper") && typeof Swiper !== "undefined") {
     new Swiper(".heroBgSwiper", {
       loop: true,
@@ -27,21 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =====================
-     PROJECT SWIPER  ✅ (FIXED)
-  ===================== */
-/* =====================
-   PROJECT SWIPER
-===================== */
+// PROJECT SWIPER 
 if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
-
-  // 🔥 body না, section দিয়ে detect
   const isProjectPage = document.querySelector(
     ".projects-section[data-project-page]"
   );
 
   new Swiper(".projectSwiper", {
-    loop: !isProjectPage,      // project page → loop OFF
+    loop: !isProjectPage,    
     speed: 900,
     spaceBetween: 16,
 
@@ -71,9 +60,7 @@ if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
 }
 
 
-  /* =====================
-     BLOG SWIPER
-  ===================== */
+      // BLOG SWIPER
   if (document.querySelector(".mySwiper") && typeof Swiper !== "undefined") {
     new Swiper(".mySwiper", {
       slidesPerView: 3,
@@ -101,9 +88,7 @@ if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
     });
   }
 
-  /* =====================
-     CONTACT FORM
-  ===================== */
+// CONTACT FORM
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -131,9 +116,7 @@ if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
     });
   }
 
-  /* =====================
-     COUNTER SECTION
-  ===================== */
+    //  COUNTER SECTION
   const counters = document.querySelectorAll(".counter");
   const section = document.querySelector(".counter-section");
   let hasAnimated = false;
