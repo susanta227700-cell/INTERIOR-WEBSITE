@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // NAVBAR
+  //========== NAVBAR =========//
   const navbarToggler = document.querySelector(".navbar-toggler");
   if (navbarToggler) {
     navbarToggler.addEventListener("click", function () {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-//  HERO SWIPER
+  //========== HERO SWIPER =========//
   if (document.querySelector(".heroBgSwiper") && typeof Swiper !== "undefined") {
     new Swiper(".heroBgSwiper", {
       loop: true,
@@ -23,72 +23,170 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-// PROJECT SWIPER 
-if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
-  const isProjectPage = document.querySelector(
-    ".projects-section[data-project-page]"
-  );
+  //========== PROJECT SWIPER =========//
+  if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
+    const isProjectPage = document.querySelector(
+      ".projects-section[data-project-page]"
+    );
 
-  new Swiper(".projectSwiper", {
-    loop: !isProjectPage,    
-    speed: 900,
-    spaceBetween: 16,
+    new Swiper(".projectSwiper", {
+      loop: !isProjectPage,
+      speed: 900,
+      spaceBetween: 16,
 
-    autoplay: !isProjectPage
-      ? { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }
-      : false,
+      autoplay: !isProjectPage
+        ? { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }
+        : false,
 
+      navigation: {
+        nextEl: ".right-arrow",
+        prevEl: ".left-arrow"
+      },
+
+      slidesPerView: 4,
+      slidesPerGroup: isProjectPage ? 4 : 1,
+
+      grid: {
+        rows: isProjectPage ? 2 : 1,
+        fill: "row"
+      },
+
+      breakpoints: {
+        0:   { slidesPerView: 1, grid: { rows: 1 } },
+        576: { slidesPerView: 2, grid: { rows: isProjectPage ? 2 : 1 } },
+        992: { slidesPerView: 4, grid: { rows: isProjectPage ? 2 : 1 } }
+      }
+    });
+  }
+
+//============ BLOG SWIPER (HOME PAGE ) ==========//
+let blogSwiper = null;
+
+if (
+  document.querySelector(".mySwiper") &&
+  !document.querySelector(".blog-main") &&
+  typeof Swiper !== "undefined"
+) {
+  blogSwiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
+    },
     navigation: {
-      nextEl: ".right-arrow",
-      prevEl: ".left-arrow"
+      nextEl: ".blog-right-arrow",
+      prevEl: ".blog-left-arrow"
     },
-
-    slidesPerView: 4,
-    slidesPerGroup: isProjectPage ? 4 : 1,
-
-    grid: {
-      rows: isProjectPage ? 2 : 1,
-      fill: "row"
-    },
-
     breakpoints: {
-      0:   { slidesPerView: 1, grid: { rows: 1 } },
-      576: { slidesPerView: 2, grid: { rows: isProjectPage ? 2 : 1 } },
-      992: { slidesPerView: 4, grid: { rows: isProjectPage ? 2 : 1 } }
+      0: { slidesPerView: 1 },
+      576: { slidesPerView: 2 },
+      1200: { slidesPerView: 3 }
     }
   });
 }
 
 
-      // BLOG SWIPER
-  if (document.querySelector(".mySwiper") && typeof Swiper !== "undefined") {
-    new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      navigation: {
-        nextEl: ".blog-right-arrow",
-        prevEl: ".blog-left-arrow"
-      },
-      breakpoints: {
-        0: { slidesPerView: 1 },
-        576: { slidesPerView: 2 },
-        992: { slidesPerView: 2 },
-        1200: { slidesPerView: 3 }
-      }
+//============ BLOG SWIPER (MAIN PAGE) ==========//
+let blogMainSwiper = null;
+
+if (document.querySelector(".blog-main") && typeof Swiper !== "undefined") {
+  blogMainSwiper = new Swiper(".blog-main", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+
+    grid: {
+      rows: 3,
+      fill: "row",
+    },
+
+    allowTouchMove: false,
+    loop: false,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: (index, className) =>
+        `<span class="${className}">${index + 1}</span>`,
+    },
+
+    breakpoints: {
+      0: { slidesPerView: 1, grid: { rows: 9 } },
+      576: { slidesPerView: 2, grid: { rows: 5 } },
+      992: { slidesPerView: 3, grid: { rows: 3 } },
+    },
+  });
+
+  // ===== PREV & NEXT BUTTON =====
+  const prevBtn = document.querySelector(".page-prev");
+  const nextBtn = document.querySelector(".page-next");
+
+  function updateArrowState() {
+    if (prevBtn) {
+      prevBtn.classList.toggle("disabled", blogMainSwiper.isBeginning);
+    }
+    if (nextBtn) {
+      nextBtn.classList.toggle("disabled", blogMainSwiper.isEnd);
+    }
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      blogMainSwiper.slidePrev();
     });
   }
 
-// CONTACT FORM
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      blogMainSwiper.slideNext();
+    });
+  }
+
+  blogMainSwiper.on("slideChange", updateArrowState);
+  updateArrowState();
+
+  // PAGINATION CHANGE
+  blogMainSwiper.on("slideChange", () => {
+    if (typeof Fancybox !== "undefined") {
+      Fancybox.bind('[data-fancybox]', {});
+    }
+  });
+}
+
+
+//============ FANCYBOX ==========//
+if (typeof Fancybox !== "undefined") {
+  Fancybox.bind('[data-fancybox]', {
+    on: {
+      reveal: (fancybox, slide) => {
+
+        // VIDEO AUTOPLAY
+        if (slide.src && slide.src.includes("youtube")) {
+          slide.src = slide.src.includes("?")
+            ? slide.src + "&autoplay=1"
+            : slide.src + "?autoplay=1";
+        }
+
+        if (blogSwiper && blogSwiper.autoplay) {
+          blogSwiper.autoplay.stop();
+        }
+      },
+
+      closing: () => {
+        if (blogSwiper && blogSwiper.autoplay) {
+          blogSwiper.autoplay.start();
+        }
+      }
+    }
+  });
+}
+
+
+
+
+  //============ CONTACT FORM ==========//
   const form = document.getElementById("contactForm");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -116,7 +214,7 @@ if (document.querySelector(".projectSwiper") && typeof Swiper !== "undefined") {
     });
   }
 
-    //  COUNTER SECTION
+  //============ COUNTER SECTION ==========//
   const counters = document.querySelectorAll(".counter");
   const section = document.querySelector(".counter-section");
   let hasAnimated = false;

@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --primary-color: #a35c09;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+
+  /* FONT */
+  --Poppins-font: Poppins-Medium;
+  --Roboto-font: Roboto;
+  --Inter-font: Inter-Regular;
+  --SchibstedGrotesk-font: SchibstedGrostesk-latin-ext-600-normal;
+  --playfair-font: PlayfairDisplay-Bold;
+}
+body {
+  background: #ffffff;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*
+=========================
+ CONTACT HERO SECTION
+=========================
+*/
+.contact-hero-section {
+  background: linear-gradient(
+      to right,
+      rgba(16, 14, 14, 0.6),
+      rgba(16, 14, 14, 0.4),
+      rgba(217, 217, 217, 0%)
+    ),
+    url("../assets/contact-hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 445px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 110px;
+}
+.contact-main-title {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: var(--playfair-font);
+  margin-bottom: 10px;
+}
+.breadcrumb-wrap {
+  color: var(--tertiary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: var(--Inter-font);
+}
+.breadcrumb-wrap span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.breadcrumb-wrap a {
+  color: var(--tertiary-color);
+}
+
+

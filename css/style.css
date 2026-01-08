@@ -1308,7 +1308,7 @@ OUR PROJECT SECTION
   position: relative;
   overflow: hidden;
   border-radius: 3px;
-  height: 400px;         
+  height: 400px;
 }
 
 .project-card img {
@@ -1483,7 +1483,6 @@ OUR PROJECT SECTION
   }
 }
 
-
 /* 
 ====================
 BLOG SECTION
@@ -1581,8 +1580,29 @@ BLOG CARD
   transition: transform 0.3s ease;
 }
 
-.play-btn-wrapper:hover .play-icon {
+/* .play-btn-wrapper:hover .play-icon {
   transform: scale(1.2);
+} */
+
+.video-trigger {
+  display: block;
+  position: relative;
+}
+
+.blog-img::after {
+  pointer-events: none;
+}
+
+.play-btn-wrapper {
+  pointer-events: none;
+}
+
+.video-trigger:hover .play-icon {
+  transform: scale(1.2);
+}
+
+.video-trigger:hover .play-btn-wrapper::before {
+  animation-duration: 1.9s;
 }
 
 /* rotate */
@@ -1653,7 +1673,11 @@ BLOG CARD
   transform: translateY(-3px);
 }
 
-/* BLOG MEDIA QUARI */
+/* 
+=====================
+BLOG MEDIA QUARI
+=====================
+ */
 @media (max-width: 992px) {
   .blog-content h4 {
     font-size: 18px;
@@ -2597,75 +2621,40 @@ BLOG CARD
   .footer-bottom-right a:last-child {
     margin-bottom: 0;
   }
-  .last-card{
+  .last-card {
     margin-bottom: 70px;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.login-title{
-  color:#c98c3a;
-  font-weight:600;
+.login-title {
+  color: #c98c3a;
+  font-weight: 600;
 }
 
-.form-control{
-  height:46px;
+.form-control {
+  height: 46px;
 }
 
-.login-btn{
-  background:#f9a21b;
-  color:#fff;
-  border:none;
-  height:46px;
+.login-btn {
+  background: #f9a21b;
+  color: #fff;
+  border: none;
+  height: 46px;
 }
 
-.error-text{
-  font-size:13px;
-  color:red;
+.error-text {
+  font-size: 13px;
+  color: red;
 }
 
-.toggle-pass{
-  position:absolute;
-  right:12px;
-  top:38px;
-  cursor:pointer;
+.toggle-pass {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  cursor: pointer;
 }
 
-.forgot-link{
-  color:#f9a21b;
-  text-decoration:none;
+.forgot-link {
+  color: #f9a21b;
+  text-decoration: none;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
