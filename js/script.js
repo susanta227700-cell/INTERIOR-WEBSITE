@@ -251,5 +251,34 @@ if (typeof Fancybox !== "undefined") {
 
     observer.observe(section);
   }
-
+  
 });
+
+
+// MODAL PART
+document.addEventListener("DOMContentLoaded", function () {
+  const openBtn = document.getElementById("openLogin");
+  const modalEl = document.getElementById("loginModal");
+
+  if (openBtn && modalEl) {
+    const modal = new bootstrap.Modal(modalEl);
+
+    openBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.show();
+    });
+  }
+});
+
+
+
+
+// PAGE LOADER
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    const loader = document.getElementById("page-loader");
+    if (loader) loader.style.display = "none";
+  }, 7000); // 1.5s
+});
+
+

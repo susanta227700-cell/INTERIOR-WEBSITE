@@ -241,9 +241,15 @@
                 </svg>
               </a>
 
-              <div class="primary-btn">
+              <!-- <div class="primary-btn">
                 <a href="./login.html">Login</a>
-              </div>
+              </div> -->
+<div class="offcanvas-login">
+  <div class="primary-btn">
+    <a href="javascript:void(0)" id="openLogin">Login</a>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
@@ -909,6 +915,125 @@
         </div>
       </div>
     </footer>
+
+<!-- MODAL MODAL PART -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content p-0 position-relative">
+
+     <!-- CROSS BUTTON -->
+      <span class="custom-close" data-bs-dismiss="modal">&times;</span>
+
+      <div class="modal-part">
+        <div class="row m-0 align-items-center">
+
+          <!-- LEFT IMAGE -->
+          <div class="col-6 p-0 d-none d-md-block">
+            <div class="modal-left-img">
+              <img src="./assets/modal-left-img.png" alt="">
+            </div>
+          </div>
+
+          <!-- RIGHT FORM -->
+          <div class="col-12 col-md-6 p-4">
+            <p class="modal-heading">Create your account</p>
+
+            <form>
+              <div class="row">
+                <div class="col-6">
+                  <label>Name</label>
+                  <input type="text" placeholder="First Name">
+                </div>
+                <div class="col-6">
+                  <label>&nbsp;</label>
+                  <input type="text" placeholder="Last Name">
+                </div>
+              </div>
+
+              <label>Mobile Number</label>
+              <input type="text" placeholder="Enter Mobile Number">
+
+              <label>Email</label>
+              <input type="email" placeholder="Enter your email">
+
+              <label>Password</label>
+              <input type="password" placeholder="Enter your Password">
+
+              <label>Confirm Password </label>
+              <input type="password" placeholder="Confirm Password">
+
+              <div class="terms-check">
+                <input type="checkbox" id="terms">
+                <label for="terms">
+                  By creating an account, I agree to our
+                  <a href="#">Terms of use</a> and
+                  <a href="#">Privacy Policy</a>.
+                </label>
+              </div>
+            </form>
+   
+
+  <div class="primary-btn login-center-btn">
+    <a href="javascript:void(0)" id="openLogin">Sign Up</a>
+  </div>
+
+  <div class="signup-after-or">
+   <span>or</span>
+  </div>
+
+ <div class="modal-social-icon">
+
+  <!-- GOOGLE -->
+  <div class="social-app-login google-login">
+    <div class="social-contents">
+      
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.76215 15.7121L4.85713 19.0907L1.54929 19.1607C0.560727 17.3271 0 15.2293 0 13C0 10.8443 0.524266 8.81141 1.45356 7.02142H1.45427L4.39918 7.56133L5.68923 10.4886C5.41922 11.2757 5.27206 12.1207 5.27206 13C5.27216 13.9543 5.44502 14.8686 5.76215 15.7121Z" fill="#FBBB00"/>
+<path d="M25.7732 10.5714C25.9225 11.3578 26.0003 12.17 26.0003 13C26.0003 13.9307 25.9025 14.8386 25.7161 15.7143C25.0832 18.6943 23.4296 21.2964 21.1389 23.1378L21.1382 23.1371L17.429 22.9479L16.904 19.6707C18.424 18.7793 19.6119 17.3843 20.2376 15.7143H13.2861V10.5714H25.7732Z" fill="#518EF8"/>
+<path d="M21.1374 23.1371L21.1381 23.1378C18.9103 24.9285 16.0802 26 12.9995 26C8.04883 26 3.74456 23.2329 1.54883 19.1607L5.76169 15.7122C6.85953 18.6421 9.68596 20.7279 12.9995 20.7279C14.4238 20.7279 15.7581 20.3428 16.9031 19.6707L21.1374 23.1371Z" fill="#28B446"/>
+<path d="M21.2984 2.99284L17.087 6.44069C15.902 5.69999 14.5012 5.27211 13.0005 5.27211C9.61196 5.27211 6.73266 7.45352 5.68982 10.4886L1.45481 7.02142H1.4541C3.61769 2.85 7.97624 0 13.0005 0C16.1548 0 19.047 1.12359 21.2984 2.99284Z" fill="#F14336"/>
+</svg>
+
+      <p class="social-text">Login with Google</p>
+    </div>
+  </div>
+
+  <!-- FACEBOOK -->
+  <div class="social-app-login facebook-login">
+    <div class="social-contents">
+      
+<svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.1999 0C-3.16588 0.479368 -4.83491 23.444 11.1268 26.4H15.273C31.2383 23.4412 29.5621 0.477701 13.1999 0Z" fill="#1877F2"/>
+<path d="M15.2729 17.1195H18.3645L18.9528 13.2806H15.2729V10.7893C15.2729 9.73914 15.787 8.71538 17.4352 8.71538H19.1084V5.44706C15.5252 4.80151 11.2204 4.99798 11.1267 10.3547V13.2806H7.75781V17.1195H11.1267V26.4H15.2729V17.1195Z" fill="#F1F1F1"/>
+</svg>
+
+      <p class="social-text">Login with Facebook</p>
+    </div>
+  </div>
+
+  <!-- TWITTER -->
+  <div class="social-app-login twitter-login last-app">
+    <div class="social-contents">
+     
+<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 0C5.82055 0 0 5.82055 0 13C0 20.1795 5.82055 26 13 26C20.1795 26 26 20.1795 26 13C26 5.82055 20.1795 0 13 0Z" fill="black"/>
+<path d="M14.4231 11.8236L19.9883 5.35455H18.6695L13.8373 10.9715L9.97781 5.35455H5.52637L11.3626 13.8484L5.52637 20.6322H6.8452L11.9482 14.7005L16.024 20.6322H20.4755L14.4228 11.8236H14.4231ZM7.32039 6.34736H9.34604L18.6701 19.6845H16.6444L7.32039 6.34736Z" fill="white"/>
+</svg>
+
+      <p class="social-text">Login with Twitter</p>
+    </div>
+  </div>
+
+</div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
 
     <!-- BOOTSTRAP JS -->
     <script
