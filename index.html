@@ -62,6 +62,12 @@
   </div>
     <!-- LOADER END -->
 
+     <!-- MOUSE MOVING -->
+     <div class="cursor">
+  <span class="cursor-dot"></span>
+</div>
+ <!-- MOUSE MOVING END-->
+
     <!-- HEADER SECTION (Main Navbar)-->
     <header class="navbar-section">
       <!-- TOP HEADER (Outside Navbar) -->
@@ -276,6 +282,9 @@
       </nav>
     </header>
     <!-- END -->
+
+    <div id="luxy">
+
 
     <!-- HERO SECTION -->
     <section class="hero-section">
@@ -1384,26 +1393,32 @@
               </div>
             </div>
             <!-- card-9 -->
-            <div class="swiper-slide">
+   <div class="swiper-slide">
               <div class="blog-img">
-                <img src="./assets/blog-img-9.png" />
-                <!-- play-btn -->
-                <div class="play-btn-wrapper">
-                  <div class="play-icon">
-                    <svg
-                      width="10"
-                      height="13"
-                      viewBox="0 0 10 13"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.89118 5.597L1.42905 0.172606C1.29499 0.074873 1.1365 0.0161291 0.97113 0.00287481C0.805756 -0.0103795 0.63994 0.0223725 0.492024 0.0975064C0.344108 0.17264 0.219859 0.287227 0.133023 0.428591C0.0461879 0.569955 0.000150509 0.732585 0 0.898489V11.7437C-0.000502061 11.9099 0.0451614 12.0729 0.131901 12.2146C0.218641 12.3563 0.343047 12.4712 0.491244 12.5463C0.63944 12.6215 0.8056 12.654 0.971192 12.6402C1.13678 12.6265 1.2953 12.567 1.42905 12.4684L8.89118 7.04877C9.00648 6.96607 9.10042 6.85709 9.16522 6.73086C9.23002 6.60463 9.26382 6.46478 9.26382 6.32288C9.26382 6.18099 9.23002 6.04114 9.16522 5.91491C9.10042 5.78868 9.00648 5.6797 8.89118 5.597Z"
-                        fill="#FFFEFE"
-                      />
-                    </svg>
+                <a
+                  class="video-trigger"
+                  data-fancybox
+                  href="https://youtu.be/ylkxdLosuDo?si=20TCmnQLMvIQWkH1"
+                >
+                  <img src="./assets/blog-img-9.png" alt="" />
+
+                  <div class="play-btn-wrapper">
+                    <div class="play-icon">
+                      <svg
+                        width="10"
+                        height="13"
+                        viewBox="0 0 10 13"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.89118 5.597L1.42905 0.172606C1.29499 0.074873 1.1365 0.0161291 0.97113 0.00287481C0.805756 -0.0103795 0.63994 0.0223725 0.492024 0.0975064C0.344108 0.17264 0.219859 0.287227 0.133023 0.428591C0.0461879 0.569955 0.000150509 0.732585 0 0.898489V11.7437C-0.000502061 11.9099 0.0451614 12.0729 0.131901 12.2146C0.218641 12.3563 0.343047 12.4712 0.491244 12.5463C0.63944 12.6215 0.8056 12.654 0.971192 12.6402C1.13678 12.6265 1.2953 12.567 1.42905 12.4684L8.89118 7.04877C9.00648 6.96607 9.10042 6.85709 9.16522 6.73086C9.23002 6.60463 9.26382 6.46478 9.26382 6.32288C9.26382 6.18099 9.23002 6.04114 9.16522 5.91491C9.10042 5.78868 9.00648 5.6797 8.89118 5.597Z"
+                          fill="#FFFEFE"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
               <div class="blog-content">
                 <h4>Bijoy & Rakhi</h4>
@@ -1414,6 +1429,7 @@
                 </p>
               </div>
             </div>
+
           </div>
 
           <!-- ARROWS -->
@@ -1812,6 +1828,8 @@
       </div>
     </section>
 
+    
+
     <!-- FOOTER SECTION -->
     <footer class="footer-section">
       <div class="container">
@@ -2049,6 +2067,7 @@
         </div>
       </div>
     </footer>
+    </div>
 
 <!-- MODAL MODAL PART -->
 <div class="modal fade" id="loginModal" tabindex="-1">
@@ -2193,6 +2212,10 @@
 
     <!-- SCRIPT JS -->
     <script src="./js/script.js"></script>
+
+    <!-- luxy -->
+    <script src="https://cdn.jsdelivr.net/npm/luxy.js@0.1.0/dist/js/luxy.min.js"></script>
+
     
   </body>
 </html>

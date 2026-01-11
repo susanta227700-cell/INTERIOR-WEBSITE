@@ -255,7 +255,7 @@ NAVBAR SECTION
 =========================
 */
 @media screen and (max-width: 1200px) {
-  .offcanvas {
+  /* .offcanvas {
     background: rgba(0, 0, 0, 0.55);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -264,7 +264,28 @@ NAVBAR SECTION
     height: 100vh;
     padding-top: 90px;
     margin-top: 16px;
-  }
+  } */
+
+  .offcanvas {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../assets/ofcanvas-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: -15px 0 40px rgba(0, 0, 0, 0.6);
+
+  height: 100vh;
+  padding-top: 90px;
+  margin-top: 16px;
+}
+
   .navbar-nav {
     margin-top: 100px !important;
   }
@@ -2746,7 +2767,7 @@ BLOG MEDIA QUARI
 }
 
 .terms-check a{
-  color: #6a5acd;
+  color: #5106FF;
   text-decoration: none;
 }
 
@@ -2904,7 +2925,10 @@ BLOG MEDIA QUARI
 
 
 
-/*  PAGE LOADER  */
+/*
+================= 
+ PAGE LOADER 
+================= */
 #page-loader{
   position: fixed;
   inset: 0;
@@ -2941,3 +2965,40 @@ BLOG MEDIA QUARI
 }
 
 /* loader end */
+
+
+/*
+====================
+MOUSE MOVING
+====================
+ */
+.cursor{
+  width: 55px;
+  height: 55px;
+  border: 3px solid var(--tertiary-color);
+  border-radius: 50%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  mix-blend-mode: difference;
+}
+
+.cursor-dot{
+  width: 12px;
+  height: 12px;
+  background: #ff9900;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+
+/* #luxy{
+  will-change: transform;
+} */
