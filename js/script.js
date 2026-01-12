@@ -278,35 +278,45 @@ window.addEventListener("load", function () {
   setTimeout(function () {
     const loader = document.getElementById("page-loader");
     if (loader) loader.style.display = "none";
-  }, 2000); // 
+  }, 2000); 
 });
 
 
 
 
-// mouse
+// MOUSE MOVING
+const cursor = document.querySelector('.cursor');      
+const dot = document.querySelector('.cursor-dot');   
 
- const cursor = document.querySelector('.cursor');
-  const dot = document.querySelector('.cursor-dot');
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+let dotX = 0, dotY = 0;
 
-  let mouseX = 0, mouseY = 0;
-  let dotX = 0, dotY = 0;
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
 
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top  = mouseY + 'px';
-  });
+function animate() {
+  cursorX += (mouseX - cursorX) * 0.050;
+  cursorY += (mouseY - cursorY) * 0.050;
 
-  function animateDot(){
-    dotX += (mouseX - dotX) * 0.15;
-    dotY += (mouseY - dotY) * 0.15;
-    dot.style.transform = `translate(${dotX - mouseX}px, ${dotY - mouseY}px)`;
-    requestAnimationFrame(animateDot);
-  }
+  cursor.style.left = cursorX + 'px';
+  cursor.style.top  = cursorY + 'px';
 
-  animateDot();
+  dotX += (mouseX - dotX) * 0.18;
+  dotY += (mouseY - dotY) * 0.18;
+
+  const dx = dotX - cursorX;
+  const dy = dotY - cursorY;
+
+  dot.style.transform = `translate(${dx}px, ${dy}px)`;
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+
 
 
 

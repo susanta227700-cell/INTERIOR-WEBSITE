@@ -2304,6 +2304,8 @@ BLOG MEDIA QUARI
   background: #8a6b46;
   position: relative;
   z-index: 1;
+  height: auto;
+  overflow: visible;
 }
 
 .footer-section .footer-row {
@@ -2946,7 +2948,7 @@ BLOG MEDIA QUARI
 }
 
 .line {
-  width: 10px;
+  width: 8px;
   height: 70px;
   background-color: var(--primary-color);
   animation: bounce 1.5s infinite ease-in-out;
@@ -2999,6 +3001,3 @@ MOUSE MOVING
 }
 
 
-/* #luxy{
-  will-change: transform;
-} */
