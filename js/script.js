@@ -311,7 +311,6 @@ window.addEventListener("load", function () {
 
 
   // luxy
-
 document.addEventListener("DOMContentLoaded", function () {
   luxy.init({
     wrapper: '#luxy',
