@@ -2948,7 +2948,7 @@ BLOG MEDIA QUARI
 }
 
 .line {
-  width: 8px;
+  width: 9px;
   height: 70px;
   background-color: var(--primary-color);
   animation: bounce 1.5s infinite ease-in-out;
@@ -3000,4 +3000,9 @@ MOUSE MOVING
   mix-blend-mode: difference;
 }
 
+@media (max-width: 768px), (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none !important;
+  }
+}
 

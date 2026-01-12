@@ -285,37 +285,45 @@ window.addEventListener("load", function () {
 
 
 // MOUSE MOVING
-const cursor = document.querySelector('.cursor');      
-const dot = document.querySelector('.cursor-dot');   
+if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+  const cursorEl = document.querySelector('.cursor');
+  if (cursorEl) cursorEl.style.display = 'none';
+} else {
 
-let mouseX = 0, mouseY = 0;
-let cursorX = 0, cursorY = 0;
-let dotX = 0, dotY = 0;
+  const cursor = document.querySelector('.cursor');
+  const dot = document.querySelector('.cursor-dot');
 
-document.addEventListener('mousemove', (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
+  let dotX = 0, dotY = 0;
 
-function animate() {
-  cursorX += (mouseX - cursorX) * 0.050;
-  cursorY += (mouseY - cursorY) * 0.050;
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
 
-  cursor.style.left = cursorX + 'px';
-  cursor.style.top  = cursorY + 'px';
+  function animate() {
 
-  dotX += (mouseX - dotX) * 0.18;
-  dotY += (mouseY - dotY) * 0.18;
+    cursorX += (mouseX - cursorX) * 0.050;
+    cursorY += (mouseY - cursorY) * 0.050;
 
-  const dx = dotX - cursorX;
-  const dy = dotY - cursorY;
+    cursor.style.left = cursorX + 'px';
+    cursor.style.top  = cursorY + 'px';
 
-  dot.style.transform = `translate(${dx}px, ${dy}px)`;
+    dotX += (mouseX - dotX) * 0.18;
+    dotY += (mouseY - dotY) * 0.18;
 
-  requestAnimationFrame(animate);
+    const dx = dotX - cursorX;
+    const dy = dotY - cursorY;
+
+    dot.style.transform = `translate(${dx}px, ${dy}px)`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
 }
 
-animate();
 
 
 
