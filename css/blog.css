@@ -169,10 +169,6 @@ BLOG CARD
   transition: transform 0.3s ease;
 }
 
-/* .play-btn-wrapper:hover .play-icon {
-  transform: scale(1.2);
-} */
-
 .video-trigger {
   display: block;
   position: relative;
@@ -182,7 +178,7 @@ BLOG CARD
   pointer-events: none;
 }
 
-/* play button click + hover enable */
+/* play button click + hover  */
 .play-btn-wrapper,
 .play-icon {
   pointer-events: auto;

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 16,
 
       autoplay: !isProjectPage
-        ? { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }
+        ? { delay: 2500, disableOnInteraction: false, pauseOnMouseEnter: true }
         : false,
 
       navigation: {
@@ -254,22 +254,68 @@ if (typeof Fancybox !== "undefined") {
   
 });
 
+//NEWSLETTER SECTION
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".subscribe-box");
+  const emailInput = document.getElementById("user-mail");
+
+  const popup = document.createElement("div");
+  popup.innerText = "Thanks for subscribing! 🎉";
+  document.body.appendChild(popup);
+
+  Object.assign(popup.style, {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%) scale(0.8)",
+    background: "#0a1a1c",
+    color: "#fff",
+    padding: "18px 30px",
+    borderRadius: "6px",
+    fontSize: "15px",
+    opacity: "0",
+    pointerEvents: "none",
+    transition: "all 0.35s ease",
+    zIndex: "9999"
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (emailInput.value.trim() === "") return;
+
+    popup.style.opacity = "1";
+    popup.style.transform = "translate(-50%, -50%) scale(1)";
+
+    setTimeout(() => {
+      popup.style.opacity = "0";
+      popup.style.transform = "translate(-50%, -50%) scale(0.8)";
+    }, 2500);
+
+    emailInput.value = "";
+  });
+});
+
+//NEWSLETTER SECTION END
+
 
 // MODAL PART
-document.addEventListener("DOMContentLoaded", function () {
-  const openBtn = document.getElementById("openLogin");
+document.addEventListener("DOMContentLoaded", () => {
   const modalEl = document.getElementById("loginModal");
+  const openBtns = document.querySelectorAll("#openLogin");
 
-  if (openBtn && modalEl) {
-    const modal = new bootstrap.Modal(modalEl);
+  if (!modalEl || openBtns.length === 0) return;
 
-    openBtn.addEventListener("click", function (e) {
+  const modal = new bootstrap.Modal(modalEl);
+
+  openBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       modal.show();
     });
-  }
+  });
 });
-
 
 
 
@@ -280,8 +326,6 @@ window.addEventListener("load", function () {
     if (loader) loader.style.display = "none";
   }, 2000); 
 });
-
-
 
 
 // MOUSE MOVING
@@ -304,8 +348,8 @@ if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
 
   function animate() {
 
-    cursorX += (mouseX - cursorX) * 0.050;
-    cursorY += (mouseY - cursorY) * 0.050;
+    cursorX += (mouseX - cursorX) * 0.045;
+    cursorY += (mouseY - cursorY) * 0.045;
 
     cursor.style.left = cursorX + 'px';
     cursor.style.top  = cursorY + 'px';
