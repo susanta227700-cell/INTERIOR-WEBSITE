@@ -2367,7 +2367,6 @@ BLOG MEDIA QUARI
 }
 
 /* BANKING CARDS */
-
 .banking-cards {
   display: flex;
   align-items: center;
@@ -2378,17 +2377,20 @@ BLOG MEDIA QUARI
 }
 
 .banking-cards img {
-  margin-right: 8px;
   margin-bottom: 8px;
   height: 26px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+
+
 .banking-cards img:hover {
   transform: translateY(-4px);
 }
-
-.banking-cards img:last-child {
+.banking-cards a{
+  margin-right: 8px;
+}
+.banking-cards a:last-child {
   margin-right: 0;
 }
 
